@@ -14,7 +14,7 @@ $tv->price = 4.500;
 
 echo $tv->name; echo ', ';
 echo $tv->description; echo ', ';
-echo $tv->price; echo ', ';
+echo $tv->price; 
 echo '<hr>'; 
 
 $geladeira = new Product;
@@ -24,6 +24,6 @@ $geladeira->price = 2.900;
 
 echo $geladeira->name; echo ', ';
 echo $geladeira->description; echo ', ';
-echo $geladeira->price; echo ', ';
+echo $geladeira->price;
 echo '<hr>';
 
