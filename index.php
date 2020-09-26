@@ -11,17 +11,27 @@ class Product
         return "{$this->name} # {$this->description} # {$this->price} <hr>";
     }
 
+    function setName(String $name)
+    {
+        $this->name = $name;
+    }
+
+    function getName(): String
+    {
+        return strtolower($this->name);
+    }
+
 }
 
 $tv = new Product;
-$tv-> name = 'TV';
+$tv-> setName('TV');
 $tv->description = 'Smart TV';
 $tv->price = 4.500;
-
+echo $tv->getName();
 echo $tv->get();  
 
 $geladeira = new Product;
-$geladeira->name = 'Geladeira';
+$geladeira-> setName('Geladeira');
 $geladeira->description = 'Degelo automático';
 $geladeira->price = 2.900;
 
