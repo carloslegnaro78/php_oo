@@ -21,6 +21,11 @@ class Product
         return strtolower($this->name);
     }
 
+    function __destruct()
+    {
+        echo 'Entrei no destrutor ... heheheh';
+    }
+
 }
 
 $tv = new Product;
