@@ -1,45 +1,98 @@
 <?php
 
-class Product
+class ContaPfis
 {
+    var $number;
     var $name;
-    var $description;
-    var $price;
+    var $cpf;
 
-    function get()
+    public function setNumber(String $number)
     {
-        return "{$this->name} # {$this->description} # {$this->price} <hr>";
+        $this->number = $number;
     }
 
-    function setName(String $name)
+    public function getNumber() : String
+    {
+        return $this->number;
+    }
+
+    public function setName(String $name)
     {
         $this->name = $name;
     }
-
-    function getName(): String
+   
+    public function getName() : String
     {
-        return strtolower($this->name);
+        return $this->name;
     }
 
-    function __destruct()
+    public function setCPF(String $cpf)
     {
-        echo 'Entrei no destrutor ... heheheh';
+        $this->cpf = $cpf;
+    }
+
+    public function getData() : String
+    {
+        return "Nome: {$this->name}, Número: {$this->number}, CPF: {$this->cpf}";
     }
 
 }
 
-$tv = new Product;
-$tv-> setName('TV');
-$tv->description = 'Smart TV';
-$tv->price = 4.500;
-echo $tv->getName();
-echo $tv->get();  
+class ContaPJUR
+{
+    var $number;
+    var $name;
+    var $cnpj;
 
-$geladeira = new Product;
-$geladeira-> setName('Geladeira');
-$geladeira->description = 'Degelo automático';
-$geladeira->price = 2.900;
 
-echo $geladeira->get();
+    public function setNumber(String $number)
+    {
+        $this->number = $number;
+    }
 
+    public function getNumber() : string
+    {
+        return $this->number;
+    }
+
+    public function setName(String $name)
+    {
+        $this->name =$name;
+    }
+
+    public function getName() : String
+    {
+        return $this->name;
+    }
+
+    public function setCNPJ(String $cnpj)
+    {
+        $this->cnpj = $cnpj;
+    }
+
+    public function getCNPJ() : String
+    {
+        return $this->cnpj;
+    }
+
+    public function getData() : String
+    {
+        return "Nome: {$this->name}, Número: {$this->number}, CNPJ: {$this->cnpj}";
+    }
+
+}
+
+$carlos = new ContaPfis;
+$carlos->setNumber('123456');
+$carlos->setName('Carlos Legnaro');
+$carlos->setCPF('27314671922');
+echo $carlos->getData();
+
+echo '<hr>';
+
+$egestao = new ContaPJUR;
+$egestao->setName('e-gestao');
+$egestao->setNumber('1234567');
+$egestao->setCNPJ('5332235678');
+echo $egestao->getData();
 
