@@ -57,6 +57,11 @@ class ContaPJUR extends Conta
         return $this->cnpj;
     }
 
+    public function setName(String $name)
+    {
+        return $this->name =  strtoupper($name);
+    }
+
     public function getData() : String
     {
         return "Nome: {$this->name}, Número: {$this->number}, CNPJ: {$this->cnpj}";
