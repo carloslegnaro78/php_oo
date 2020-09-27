@@ -1,10 +1,9 @@
 <?php
 
-class ContaPfis
+class Conta 
 {
     var $number;
     var $name;
-    var $cpf;
 
     public function setNumber(String $number)
     {
@@ -18,13 +17,19 @@ class ContaPfis
 
     public function setName(String $name)
     {
-        $this->name = $name;
+        return $this->name = $name;
     }
-   
+
     public function getName() : String
     {
         return $this->name;
     }
+
+}
+
+class ContaPfis extends Conta
+{
+    var $cpf;
 
     public function setCPF(String $cpf)
     {
@@ -38,32 +43,9 @@ class ContaPfis
 
 }
 
-class ContaPJUR
+class ContaPJUR extends Conta
 {
-    var $number;
-    var $name;
-    var $cnpj;
-
-
-    public function setNumber(String $number)
-    {
-        $this->number = $number;
-    }
-
-    public function getNumber() : string
-    {
-        return $this->number;
-    }
-
-    public function setName(String $name)
-    {
-        $this->name =$name;
-    }
-
-    public function getName() : String
-    {
-        return $this->name;
-    }
+    var $cnpj;  
 
     public function setCNPJ(String $cnpj)
     {
@@ -95,4 +77,3 @@ $egestao->setName('e-gestao');
 $egestao->setNumber('1234567');
 $egestao->setCNPJ('5332235678');
 echo $egestao->getData();
-
