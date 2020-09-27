@@ -1,6 +1,6 @@
 <?php
 
-class Conta 
+abstract class Conta 
 {
     var $number;
     var $name;
@@ -82,3 +82,6 @@ $egestao->setName('e-gestao');
 $egestao->setNumber('1234567');
 $egestao->setCNPJ('5332235678');
 echo $egestao->getData();
+
+echo '<hr>';
+//$not = new Conta;
