@@ -25,9 +25,11 @@ abstract class Conta
         return $this->name;
     }
 
+    abstract public function getData() : string;
+
 }
 
-class ContaPfis extends Conta
+final class ContaPfis extends Conta
 {
     var $cpf;
 
@@ -43,7 +45,7 @@ class ContaPfis extends Conta
 
 }
 
-class ContaPJUR extends Conta
+final class ContaPJUR extends Conta
 {
     var $cnpj;  
 
