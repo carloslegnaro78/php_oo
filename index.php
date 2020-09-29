@@ -1,24 +1,9 @@
 <?php
 
-class Pessoa
+class Escola
 {
-
-    //public, protected, private
-
-    private $name;
-    
-    public function setName(String $name)
-    {
-        $this->name = $name;
-    }
-
-    public function getName() : String
-    {
-        return $this->name;
-    }
-
+    const PID = 'FAFADE';
 }
 
-$carlos = new Pessoa;
-$carlos->setName('Carlos');
-echo $carlos->getName();
+$escola01 = new Escola;
+echo $escola01::PID;
